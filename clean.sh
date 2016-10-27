@@ -9,13 +9,15 @@ MODEL=$(echo $MODEL | sed 's/+/::/g')
 models="darkLR
 diphotonModels
 LR+DM
-tripletLR
-radinert+T13A
+tripletLRDMradinert+T13A
+radinert+RSIII
 SM+HighScale
 Zee
 SimplifiedDM+IDM
 SimplifiedDM+SDFDM
 SimplifiedDM+TFDM
+LRmodels+LRSSM
+LRmodels+tripletLRDM
 "
 Nm=$(echo "$models" | wc -l)
 models=$(echo "$models" |sed 's/+/::/g' | egrep  -v '^'"$MODEL"'$' | sed 's/::/+/g')
